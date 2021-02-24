@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {SocketProvider} from './Context/SocketContext';
 import MapasApp from './MapasApp';
-import './index.css'
+import './index.css';
 
 ReactDOM.render(
-    <MapasApp />,
+    <SocketProvider>
+        <MapasApp />
+    </SocketProvider>,
   document.getElementById('root')
 );
 
